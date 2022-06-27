@@ -26,11 +26,6 @@ public class FacultyController {
         return facultyService.findFacultyByColorOrNameIgnoreCase(color, name);
     }
 
-    @GetMapping()
-    public Collection<Student> readFacultyStudents ( @RequestBody Faculty faculty ) {
-        return facultyService.readFacultyStudents(faculty);
-    }
-
     @PostMapping()
     public Faculty createFaculty ( @RequestBody Faculty faculty ) {
         return facultyService.createFaculty(faculty);

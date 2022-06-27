@@ -27,11 +27,6 @@ public class StudentController {
         return studentService.findByAgeBetween(minAge, maxAge);
     }
 
-    @GetMapping
-    public Faculty readStudentFaculty ( @RequestParam Long studentKey ) {
-        return studentService.readStudentFaculty(studentKey);
-    }
-
     @PostMapping()
     public Student createStudent ( @RequestBody Student student ) {
         return studentService.createStudent(student);
